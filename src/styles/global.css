@@ -1,0 +1,40 @@
+body,
+main {
+    margin: 0;
+    padding: 0;
+    color: #050A35;
+
+    --desktop: 1440px;
+    --tablet: 991px;
+    --mobile: 767px;
+
+    --from-mobile: (min-width: var(--mobile));
+    --from-tablet: (min-width: var(--tablet));
+    --from-desktop: (min-width: calc(var(--desktop) + 1px));
+    --up-to-mobile: (max-width: calc(var(--mobile) - 1px));
+    --up-to-tablet: (max-width: calc(var(--tablet) - 1px));
+    --up-to-desktop: (max-width: var(--desktop));
+    background-color: #E2F4FF;
+}
+
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+h3 {
+
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}

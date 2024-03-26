@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
+import "../styles/global.css";
 import { Inter } from "next/font/google";
-import "./globals.css";
+import { draftMode } from "next/headers";
+import LiveVisualEditing from "../../sanity/components/LiveVisualEditing";
 
+// If loading a variable font, you don't need to specify the font weight
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -16,7 +19,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+        {draftMode().isEnabled && <LiveVisualEditing />}
+      </body>
     </html>
   );
 }

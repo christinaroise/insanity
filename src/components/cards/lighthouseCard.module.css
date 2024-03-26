@@ -1,0 +1,23 @@
+.card {
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+@media screen and (min-width: 991px) {
+    .card {
+        max-width: 368px;
+        height: 100%;
+    }
+}
+
+.imageWrapper {
+    height: 14.4375rem;
+}
+
+.infoWrapper {
+    display: flex;
+    padding: 1.25rem 1.5rem;
+    flex-direction: column;
+    gap: 0.75rem;
+}
